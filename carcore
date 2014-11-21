@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>car</title>
+</head>
+<body style="overflow-x:hidden;">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$(document).keydown(function(e){
+		if(!$("#wef").is(':animated'))
+		{
+		switch(e.keyCode){
+				case 39 :
+				$('#wef').animate({'marginLeft':"+=200px"});
+				break;
+				case 37 :
+				$('#wef').animate({'marginLeft':"-=100px"});
+				break;
+				}
+			}
+		return false;
+		});
+});
+</script>
+<div style="width:100%; position:relative; height:300px; background:#fff;">
+<img id="wef" src="./all/car.png" style="width:300px; position:absolute;"/>
+<div style="width:101%; position:absolute; top:140px; left:-10px; right:-10px; border:solid thick #000;"></div>
+</div>
+
+</body>
+</html>
